@@ -17,7 +17,16 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-
-<div class="">
-    <app-post-list [posts]="post"></app-post-list>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a routerLink="posts">List des posts</a></li>
+      <li routerLinkActive="active"><a routerLink="new">Nouveu post</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
 </div>
